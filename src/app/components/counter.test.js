@@ -29,6 +29,15 @@ describe("Counter Component", () => {
     expect(screen.getByText(/Count: 0/i)).toBeInTheDocument();
   });
 
+  test("Increment button is disabled at count 10", () => {
+    render(<Counter />);
+    const incrementBtn = screen.getByText("+");
+    for (let i = 0; i < 10; i++) {
+      fireEvent.click(incrementBtn);
+    }
+    expect(incrementBtn).toBeDisabled();
+  });
+
   test("Decrement button is disabled at count 0", () => {
     render(<Counter />);
     expect(screen.getByText("-")).toBeDisabled();

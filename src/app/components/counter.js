@@ -21,7 +21,7 @@ export default function Counter() {
         <h1>Welcome to the Counter App</h1>
         <br />
         <div>
-          <button onClick={handleIncrement}>+</button>
+          <button disabled={count === 10} onClick={handleIncrement}>+</button>
           <span style={{ margin: "0 10px" }}>Count: {count}</span>
           <button disabled={count === 0} onClick={handleDecrement}>
             -
