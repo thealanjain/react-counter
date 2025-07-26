@@ -6,8 +6,8 @@ export default function Counter() {
   const [count, setCount] = useState(0);
 
   // Maximum and minimum count values from environment variables
-  const MAX_COUNT = parseInt(process.env.NEXT_PUBLIC_MAX_COUNT, 10) || 10;
-  const MIN_COUNT = parseInt(process.env.NEXT_PUBLIC_MIN_COUNT, 10) || 0;
+  const MAX_COUNT = parseInt(process.env.NEXT_PUBLIC_MAX_COUNT, 10);
+  const MIN_COUNT = parseInt(process.env.NEXT_PUBLIC_MIN_COUNT, 10);
 
   // Function to handle increment
   const handleIncrement = () => {
